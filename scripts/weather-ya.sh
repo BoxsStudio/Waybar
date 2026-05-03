@@ -1,8 +1,27 @@
 #!/bin/bash
 
 # Weather script using Yandex Weather
-# City can be passed as argument, default: moscow
-CITY="${1:-moscow}"
+# Usage: weather-ya.sh [city]
+#   or:  weather-ya.sh set [city]  - save city to config
+
+CONFIG_DIR="$HOME/.config/waybar"
+CITY_CONFIG="$CONFIG_DIR/.weather_city"
+
+# If "set" argument: save city to config file
+if [ "$1" = "set" ] && [ -n "$2" ]; then
+    echo "$2" > "$CITY_CONFIG"
+    echo "City set to: $2"
+    exit 0
+fi
+
+# Read city from config or use argument or default to moscow
+if [ -n "$1" ]; then
+    CITY="$1"
+elif [ -f "$CITY_CONFIG" ]; then
+    CITY=$(cat "$CITY_CONFIG")
+else
+    CITY="moscow"
+fi
 
 get_weather() {
     # Fetch Yandex Weather page and extract temperature

@@ -1,0 +1,54 @@
+#!/bin/bash
+
+# Weather command: set or show weather city
+# Usage:
+#   weather              - show current city and weather
+#   weather orenburg     - show weather for Orenburg
+#   weather set orenburg - set Orenburg as default city
+
+SCRIPT="$HOME/.config/waybar/scripts/weather-ya.sh"
+CITY_CONFIG="$HOME/.config/waybar/.weather_city"
+
+show_help() {
+    echo "Weather command - manage Yandex Weather city"
+    echo ""
+    echo "Usage:"
+    echo "  weather                    Show weather for current/default city"
+    echo "  weather <city>             Show weather for specified city"
+    echo "  weather set <city>         Set city as default"
+    echo "  weather get                Show current default city"
+    echo ""
+    echo "Examples:"
+    echo "  weather orenburg"
+    echo "  weather set moscow"
+}
+
+case "$1" in
+    help|--help|-h)
+        show_help
+        ;;
+    set)
+        if [ -z "$2" ]; then
+            echo "Error: specify city name"
+            exit 1
+        fi
+        bash "$SCRIPT" set "$2"
+        # Restart waybar to apply new city
+        pkill waybar 2>/dev/null
+        waybar > /dev/null 2>&1 &
+        echo "Waybar restarted with new city."
+        ;;
+    get)
+        if [ -f "$CITY_CONFIG" ]; then
+            echo "Current city: $(cat "$CITY_CONFIG")"
+        else
+            echo "Current city: moscow (default)"
+        fi
+        ;;
+    "")
+        bash "$SCRIPT"
+        ;;
+    *)
+        bash "$SCRIPT" "$1"
+        ;;
+esac
