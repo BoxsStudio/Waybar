@@ -35,19 +35,19 @@ TEMP=$(echo "$WEATHER_DATA" | cut -d'|' -f1 | tr -d '+')
 CONDITION=$(echo "$WEATHER_DATA" | cut -d'|' -f2 | tr '[:upper:]' '[:lower:]')
 
 # Weather condition icons
-case "$CONDITION" in
-    *sunny*|*clear*)     ICON="󰖙" ;;
-    *partly cloudy*)     ICON="󰖦" ;;
-    *cloudy*)            ICON="󰖨" ;;
-    *overcast*)          ICON="󰖨" ;;
-    *rain*|*drizzle*)    ICON="󰖺" ;;
-    *shower*)            ICON="󰖽" ;;
-    *thunder*)           ICON="󰖪" ;;
-    *snow*|*blizzard*)   ICON="󰖤" ;;
-    *sleet*)             ICON="󰖥" ;;
-    *fog*|*mist*)        ICON="󰖑" ;;
-    *wind*)              ICON="󰖄" ;;
-    *)                   ICON="󰖃" ;;
+CONDITION_LOWER=$(echo "$CONDITION" | tr ' ' '_')
+case "$CONDITION_LOWER" in
+    *sunny*|*clear*)        ICON="󰖙" ;;
+    *partly_cloudy*)        ICON="󰖦" ;;
+    *cloudy*|*overcast*)    ICON="󰖨" ;;
+    *rain*|*drizzle*)       ICON="󰖺" ;;
+    *shower*)               ICON="󰖽" ;;
+    *thunder*)              ICON="󰖪" ;;
+    *snow*|*blizzard*)      ICON="󰖤" ;;
+    *sleet*)                ICON="󰖥" ;;
+    *fog*|*mist*)           ICON="󰖑" ;;
+    *wind*)                 ICON="󰖄" ;;
+    *)                      ICON="󰖃" ;;
 esac
 
 echo "$ICON $TEMP"
