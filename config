@@ -1,0 +1,89 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 38,
+  "spacing": 8,
+  "modules-left": ["hyprland/workspaces", "battery", "cpu"],
+  "modules-center": ["clock"],
+  "modules-right": ["custom/weather", "custom/settings", "custom/wallpaper", "custom/music", "custom/musicplay", "custom/musicnext", "pulseaudio", "network"],
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "10": "十"
+    }
+  },
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁿"],
+    "format-charging": "󰂋 {capacity}%",
+    "tooltip-format": "{timeTo} осталось",
+    "states": {
+      "warning": 30,
+      "critical": 15
+    }
+  },
+  "cpu": {
+    "format": "󰘚 {usage}%",
+    "tooltip": false
+  },
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip-format": "<big>{:%A, %d %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-muted": "󰝦",
+    "format-icons": {
+      "headphone": "󰋋",
+      "hands-free": "󰌥",
+      "headset": "󰌥",
+      "phone": "󰌞",
+      "portable": "󰌞",
+      "car": "�م",
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    "on-click": "pavucontrol"
+  },
+  "network": {
+    "format-wifi": "󰤨 {essid}",
+    "format-ethernet": "󰈀 {ipaddr}",
+    "format-disconnected": "󰤭",
+    "tooltip-format": "{ifname}"
+  },
+  "custom/settings": {
+    "format": "⚙",
+    "on-click": "bash ~/.config/waybar/settings-launcher.sh"
+  },
+  "custom/wallpaper": {
+    "format": "🖼",
+    "on-click": "bash ~/.config/waybar/wallpaper.sh"
+  },
+  "custom/music": {
+    "format": "⏮",
+    "on-click": "playerctl previous"
+  },
+  "custom/musicplay": {
+    "format": "▶",
+    "on-click": "playerctl play-pause"
+  },
+  "custom/musicnext": {
+    "format": "⏭",
+    "on-click": "playerctl next"
+  },
+  "custom/weather": {
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/weather-ya.sh",
+    "interval": 600,
+    "tooltip": false
+  }
+}

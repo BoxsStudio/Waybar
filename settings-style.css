@@ -1,0 +1,130 @@
+/* Catppuccin Mocha theme for settings dropdown */
+
+window {
+  background-color: rgba(17, 17, 27, 0.97);
+  border: 1px solid rgba(137, 180, 250, 0.3);
+  border-radius: 0 0 14px 14px;
+  border-top: none;
+  font-family: "JetBrains Mono", "Noto Sans", monospace;
+  font-size: 13px;
+  color: #cdd6f4;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+  padding: 8px;
+}
+
+label {
+  color: #cdd6f4;
+  font-size: 13px;
+  margin: 4px 0;
+}
+
+entry {
+  background-color: rgba(49, 50, 68, 0.7);
+  border: 1px solid rgba(137, 180, 250, 0.2);
+  border-radius: 8px;
+  color: #cdd6f4;
+  padding: 6px 10px;
+  font-size: 12px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+entry:focus {
+  border-color: rgba(137, 180, 250, 0.6);
+  background-color: rgba(49, 50, 68, 0.9);
+}
+
+combobox {
+  background-color: rgba(49, 50, 68, 0.7);
+  border: 1px solid rgba(137, 180, 250, 0.2);
+  border-radius: 8px;
+  color: #cdd6f4;
+  padding: 4px 8px;
+  font-size: 12px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+combobox:hover {
+  border-color: rgba(137, 180, 250, 0.4);
+  background-color: rgba(49, 50, 68, 0.85);
+}
+
+combobox:focus {
+  border-color: rgba(137, 180, 250, 0.6);
+  background-color: rgba(49, 50, 68, 0.9);
+}
+
+combobox arrow {
+  color: #89b4fa;
+}
+
+scale {
+  background-color: transparent;
+  border: none;
+  margin: 6px 0;
+}
+
+scale trough {
+  background-color: rgba(49, 50, 68, 0.6);
+  border-radius: 6px;
+  border: 1px solid rgba(137, 180, 250, 0.15);
+  min-height: 6px;
+}
+
+scale highlight {
+  background: linear-gradient(90deg, #89b4fa, #74c7ec);
+  border-radius: 6px;
+}
+
+scale slider {
+  background: linear-gradient(135deg, #89b4fa, #74c7ec);
+  border: 2px solid rgba(30, 30, 46, 0.9);
+  border-radius: 50%;
+  min-width: 16px;
+  min-height: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+button {
+  background: linear-gradient(135deg, rgba(137, 180, 250, 0.2), rgba(116, 199, 236, 0.2));
+  border: 1px solid rgba(137, 180, 250, 0.25);
+  border-radius: 8px;
+  color: #cdd6f4;
+  padding: 6px 12px;
+  margin: 4px 3px;
+  font-size: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background: linear-gradient(135deg, rgba(137, 180, 250, 0.35), rgba(116, 199, 236, 0.35));
+  border-color: rgba(137, 180, 250, 0.5);
+  box-shadow: 0 3px 8px rgba(137, 180, 250, 0.2);
+}
+
+button:active {
+  background: linear-gradient(135deg, #89b4fa, #74c7ec);
+  color: #1e1e2e;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+button.default {
+  background: linear-gradient(135deg, #89b4fa, #74c7ec);
+  border-color: rgba(137, 180, 250, 0.8);
+  color: #1e1e2e;
+  font-weight: bold;
+  box-shadow: 0 3px 10px rgba(137, 180, 250, 0.3);
+}
+
+notebook tab {
+  background-color: rgba(49, 50, 68, 0.5);
+  color: #a6adc8;
+  padding: 6px 12px;
+  border-radius: 6px 6px 0 0;
+}
+
+notebook tab:checked {
+  background-color: rgba(137, 180, 250, 0.25);
+  color: #cdd6f4;
+  border-bottom: 2px solid #89b4fa;
+}
+

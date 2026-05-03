@@ -1,0 +1,146 @@
+/* ===== Waybar ===== */
+window#waybar {
+  background: linear-gradient(180deg, rgba(15, 15, 25, 0.98), rgba(25, 25, 40, 0.95));
+  color: #e2e8f0;
+  border-radius: 0;
+  margin: 0;
+  padding: 0 20px;
+  font-family: "Inter Nerd Font", "JetBrains Mono", monospace;
+  font-size: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ===== Workspaces ===== */
+#workspaces {
+  background: transparent;
+}
+
+#workspaces button {
+  padding: 5px 8px;
+  margin: 2px;
+  border-radius: 8px;
+  background: transparent;
+  color: #64748b;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+  background: linear-gradient(135deg, #f472b6, #c084fc);
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(192, 132, 252, 0.4);
+}
+
+#workspaces button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+}
+
+/* ===== Battery ===== */
+#battery {
+  background: rgba(34, 197, 94, 0.15);
+  border-radius: 8px;
+  padding: 5px 10px;
+  margin: 0 4px;
+  color: #22c55e;
+}
+
+#battery.charging {
+  background: rgba(34, 197, 94, 0.2);
+}
+
+#battery.warning {
+  background: rgba(234, 179, 8, 0.2);
+  color: #eab308;
+}
+
+#battery.critical {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+/* ===== CPU ===== */
+#cpu {
+  background: rgba(251, 146, 60, 0.15);
+  border-radius: 8px;
+  padding: 5px 10px;
+  margin: 0 4px;
+  color: #fb923c;
+}
+
+/* ===== Clock ===== */
+#clock {
+  background: rgba(99, 102, 241, 0.15);
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #a5b4fc;
+  letter-spacing: 2px;
+}
+
+/* ===== Pulse Audio ===== */
+#pulseaudio {
+  background: rgba(56, 189, 248, 0.15);
+  border-radius: 8px;
+  padding: 5px 10px;
+  margin: 0 4px;
+  color: #38bdf8;
+}
+
+#pulseaudio:hover {
+  background: rgba(56, 189, 248, 0.25);
+}
+
+/* ===== Network ===== */
+#network {
+  background: rgba(167, 139, 250, 0.15);
+  border-radius: 8px;
+  padding: 5px 10px;
+  margin: 0 4px;
+  color: #a78bfa;
+}
+
+#network:hover {
+  background: rgba(167, 139, 250, 0.25);
+}
+
+/* ===== Settings & Wallpaper ===== */
+#custom-settings, #custom-wallpaper {
+  background: rgba(100, 116, 139, 0.2);
+  border-radius: 8px;
+  padding: 5px 10px;
+  margin: 0 4px;
+  color: #94a3b8;
+}
+
+#custom-settings:hover, #custom-wallpaper:hover {
+  background: rgba(148, 163, 184, 0.3);
+  color: #fff;
+}
+
+/* ===== Music Controls ===== */
+#custom-music, #custom-musicplay, #custom-musicnext {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.3), rgba(236, 72, 153, 0.3));
+  border-radius: 50%;
+  padding: 6px;
+  margin: 0 3px;
+  color: #f472b6;
+  font-size: 11px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+#custom-music:hover, #custom-musicplay:hover, #custom-musicnext:hover {
+  background: linear-gradient(135deg, #c084fc, #f472b6);
+  color: #fff;
+}
+
+/* ===== Tray ===== */
+#tray {
+  background: rgba(100, 116, 139, 0.2);
+  border-radius: 8px;
+  padding: 4px 8px;
+  margin: 0 4px;
+}
