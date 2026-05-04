@@ -1,5 +1,5 @@
 # Waybar Config for Hyprland
-
+![вид Waybar](https://github.com/BoxsStudio/Waybar/blob/main/photo_2026-05-04_15-19-11.jpg?raw=true))
 **Автор:** BoxsStudio
 
 Кастомная конфигурация Waybar для Arch Linux с Hyprland. Включает в себя модули погоды (с Яндекса), музыки, системных индикаторов и виджет на рабочий стол.
